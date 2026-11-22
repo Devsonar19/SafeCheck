@@ -1,0 +1,6 @@
+{
+  "name": "SafeCheck",
+  "description": "Defensive security workbench that detects phishing links, scam messages, and deceptive screenshots using instant deterministic rules and fast Gemini AI reasoning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
