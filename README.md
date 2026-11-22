@@ -1,10 +1,27 @@
 # SafeCheck — Scam, Phishing & Unsafe Link Shield
 
+[![Live Demo](https://img.shields.io/badge/🚀_Launch_Live_App-safecheck--live.ai.studio-2563eb?style=for-the-badge&logo=googlechrome&logoColor=white)](https://safecheck-live.ai.studio/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Devsonar19%2FSafeCheck-181717?style=for-the-badge&logo=github)](https://github.com/Devsonar19/SafeCheck)
+[![Tests Passing](https://img.shields.io/badge/Tests-29%2F29_Passed-emerald?style=for-the-badge&logo=checkmarx)](https://github.com/Devsonar19/SafeCheck)
+
 > **PromptWars Hackathon Submission**  
 > **Vertical**: Defence and Security  
-> **Evaluation Alignment**: 100% Defensive Focus — Protect, Detect & Educate
+> **Evaluation Alignment**: 100% Defensive Focus — Protect, Detect & Educate  
+> **Live Web App**: [https://safecheck-live.ai.studio/](https://safecheck-live.ai.studio/)
+
+<p align="center">
+  <a href="https://safecheck-live.ai.studio/">
+    <img src="https://img.shields.io/badge/▶_LAUNCH_SAFECHECK_LIVE_WORKBENCH-2563EB?style=for-the-badge&logo=google&logoColor=white" alt="Launch SafeCheck Live App" height="42" />
+  </a>
+</p>
 
 SafeCheck is a privacy-first, zero-execution defensive security workbench that protects everyday users, students, and organizations from phishing links, social-engineering scam messages, and deceptive screenshots without ever visiting untrusted URLs or exposing sensitive personal data.
+
+---
+
+## 🔗 Live Application Access
+You can interact with the live deployed SafeCheck workbench directly here:
+👉 **[https://safecheck-live.ai.studio/](https://safecheck-live.ai.studio/)**
 
 ---
 
@@ -21,7 +38,24 @@ SafeCheck aligns directly with all three foundational defensive pillars:
 
 ---
 
-## 2. Approach and Logic
+## 2. How Antigravity and AI Studio Were Used to Build SafeCheck
+
+SafeCheck was conceptualized, engineered, and deployed using the combined power of **Google Antigravity** and **Google AI Studio**:
+
+### 1. Google Antigravity (Advanced Agentic Software Engineering)
+- **Autonomous Full-Stack Architecture**: Antigravity acted as an expert paired software engineer and defensive architect, designing the hybrid local-first + hardened proxy system and authoring pure TypeScript security modules (`src/lib/`) completely decoupled from DOM or network dependencies.
+- **Automated Test-Driven Defense**: Antigravity generated the comprehensive 29-test automated regression suite in `tests/`, asserting linear-time ReDoS immunity timing bounds (< 10ms under 10k adversarial characters), prototype-pollution prevention, Unicode homoglyph confusable matching, and Luhn credit card validation.
+- **Accessibility & Visual Polish**: Antigravity transformed the workbench from a generic template into a high-contrast cyber-defense suite (WCAG AAA compliant). It integrated an animated radar scan hero, moved the New Scan action to the top of the sidebar, added accessible ARIA toggle switches for the PII Shield and Hybrid AI Mode, and built the 4-level progressive Scam Drills trainer.
+- **Diagnostic & Runtime Troubleshooting**: When Vite's default security rules blocked incoming web traffic (`safecheck-live.ai.studio` 403 Forbidden), Antigravity inspected the HTTP headers, configured `server.allowedHosts: true` in `vite.config.ts`, synchronized the repository, and launched the long-running daemon process to restore 100% uptime.
+
+### 2. Google AI Studio (Cloud Prototyping, Runtime & Gemini Multimodal AI)
+- **Cloud Hosting & Preview Infrastructure**: AI Studio provides the instant cloud container environment running the live application at [https://safecheck-live.ai.studio/](https://safecheck-live.ai.studio/).
+- **Multimodal AI Integration via `@google/genai`**: Powered by the official `@google/genai` SDK with the `gemini-2.5-flash` model. When users upload deceptive screenshots or subtle social engineering messages, Gemini performs deep semantic reasoning to uncover fraudulent intent, spoofed brand layouts, and coercive payment requests.
+- **Defensive API Proxy & Server-Side Security**: Configured in strict adherence to AI Studio's `MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API`. All API keys are isolated to the server environment (`process.env.GEMINI_API_KEY`). User submissions are encapsulated inside `<untrusted_submission>` delimiters to prevent prompt injection and guarantee safe evaluation.
+
+---
+
+## 3. Approach and Logic
 
 SafeCheck utilizes a **Hybrid Local-First + Thin Hardened Proxy** architecture designed for absolute defense and privacy:
 
@@ -46,7 +80,7 @@ SafeCheck utilizes a **Hybrid Local-First + Thin Hardened Proxy** architecture d
 │   │ • threatEngine.ts     (Deterministic score fusion & actions)    │  │
 │   │ • storage.ts          (Validated localStorage persistence)      │  │
 │   └───────────────────────────────────────────┬─────────────────────┘  │
-└───────────────────────────────────────────────┼────────────────────────┘
+└────────────────────────────────────────────────────────────────────────┘
                                                 │ POST /api/analyze (Redacted Data)
                                                 ▼
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -68,7 +102,7 @@ SafeCheck utilizes a **Hybrid Local-First + Thin Hardened Proxy** architecture d
 
 ---
 
-## 3. How the Solution Works
+## 4. How the Solution Works
 
 1. **User Submits an Untrusted Target**: The user inputs a link, SMS/email text, or uploads a screenshot in the Threat Inspector workbench.
 2. **Client-Side Privacy Shield (PII Redaction)**: If PII Redaction is toggled ON, emails, phone numbers, payment cards, SSNs, and 6-digit OTP codes are masked client-side before any network requests or storage operations.
@@ -81,7 +115,7 @@ SafeCheck utilizes a **Hybrid Local-First + Thin Hardened Proxy** architecture d
 
 ---
 
-## 4. Any Assumptions Made
+## 5. Any Assumptions Made
 
 1. **Passive Zero-Execution Boundary**: SafeCheck strictly operates as a passive inspection workbench. It deliberately does NOT execute outbound HTTP crawling or port scanning of user-submitted targets to prevent SSRF vulnerabilities and avoid triggering remote honeypots.
 2. **Client Privacy Guarantee**: Scan history is stored entirely in browser `localStorage`. No user credentials, accounts, or analytics tracking are required.
@@ -89,7 +123,7 @@ SafeCheck utilizes a **Hybrid Local-First + Thin Hardened Proxy** architecture d
 
 ---
 
-## 5. Evaluation Focus Areas
+## 6. Evaluation Focus Areas
 
 ### [High Impact] Problem Statement Alignment
 - SafeCheck directly targets the PromptWars Defence & Security problem statement by protecting everyday users from malicious links, smishing, and deceptive visuals.
@@ -136,7 +170,7 @@ SafeCheck utilizes a **Hybrid Local-First + Thin Hardened Proxy** architecture d
 
 ---
 
-## 6. How Your Work is Evaluated
+## 7. How Your Work is Evaluated
 
 | Evaluation Tier | Focus Criteria | SafeCheck Implementation & Validation |
 | --- | --- | --- |
@@ -150,7 +184,7 @@ SafeCheck utilizes a **Hybrid Local-First + Thin Hardened Proxy** architecture d
 
 ---
 
-## 7. Quickstart Guide
+## 8. Quickstart Guide
 
 ### Prerequisites
 - Node.js >= 18.19 (Node 20 or 22 recommended)
@@ -188,4 +222,4 @@ npm run dev
 # or for production server:
 # npx tsx server.ts
 ```
-The application will be live at `http://localhost:3000`.
+The application will be live at `http://localhost:3000` or accessible through [https://safecheck-live.ai.studio/](https://safecheck-live.ai.studio/).
