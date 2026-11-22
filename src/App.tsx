@@ -8,10 +8,10 @@ import { SafetyGuide } from './components/SafetyGuide';
 import { ScanHistory } from './components/ScanHistory';
 import { OverallThreatVerdict } from './lib/types';
 import { loadScanHistory, saveScanVerdict, clearScanHistory } from './lib/storage';
-import { Menu, ShieldAlert, CheckCircle2, AlertTriangle, ArrowLeft } from 'lucide-react';
+import { Menu, ArrowLeft } from 'lucide-react';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<ActiveTab>('landing');
+  const [activeTab, setActiveTab] = useState<ActiveTab>('scanner');
   const [currentVerdict, setCurrentVerdict] = useState<OverallThreatVerdict | null>(null);
   const [history, setHistory] = useState<OverallThreatVerdict[]>([]);
   const [piiRedactionEnabled, setPiiRedactionEnabled] = useState(true);
